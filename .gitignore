@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+foyer.so
+foyer.dylib
+foyer.dll
+foyer.a
+foyer.lib
+foyer-test-*
+*.exe
+*.o
+*.obj
+*.lst
+foyer

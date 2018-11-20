@@ -1,0 +1,17 @@
+{
+	"description": "A minimal D application.",
+	"dependencies": {
+		"derelict-sdl2": "~>2.1.4",
+    "gfm:math": "~>6.0",
+    "dlib": "~>0.15.0",
+    "d2sqlite3": "~>0.17.1",
+    "lua-jit-d": "~>0.0.2"
+	},
+  "libs-posix": ["luajit-5.1"],
+	"authors": [
+		"bjorn"
+	],
+	"copyright": "Copyright © 2018, Björn Roberg",
+	"license": "Unlicence",
+	"name": "foyer"
+}
