@@ -67,15 +67,15 @@ void main() {
                                  windowFlags);
   scope(exit) SDL_DestroyWindow(window);
 
+  auto rendererFlags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
+  auto renderer = SDL_CreateRenderer(window, -1, rendererFlags);
+  scope(exit) SDL_DestroyRenderer(renderer);
+
   version(GL) {
     auto glContext = SDL_GL_CreateContext(window);
     scope(exit) SDL_GL_DeleteContext(glContext);
     setGlAttrs();
   }
-
-  auto rendererFlags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
-  auto renderer = SDL_CreateRenderer(window, -1, rendererFlags);
-  scope(exit) SDL_DestroyRenderer(renderer);
 
   TTF_Init();
   scope(exit) TTF_Quit();
